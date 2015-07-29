@@ -11,6 +11,12 @@ require('angular-material');
 var app = angular.module(namespace, [ 'ngMaterial',
     // inject:modules start
     
+    require('./common')(namespace).name,
+    
+        require('./crazy')(namespace).name,
+    
+        require('./important')(namespace).name
+    
     // inject:modules end
 ]);
 

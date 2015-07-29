@@ -13,6 +13,18 @@ var app = angular.module(namespace, [ 'ngMaterial',
     
     
     
+    require('./common')(namespace).name,
+    
+    
+    
+        require('./crazy')(namespace).name,
+    
+    
+    
+        require('./important')(namespace).name
+    
+    
+    
     // inject:modules end
 ]);
 
