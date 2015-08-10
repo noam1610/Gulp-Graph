@@ -8,23 +8,15 @@ if (window.location.toString().indexOf('localhost:5555') > 0) {
 var angular = require('angular');
 require('angular-ui-router');
 require('angular-material');
-var app = angular.module(namespace, [ 'ngMaterial',
+var app = angular.module(namespace, ['ngMaterial',
     // inject:modules start
-    
-    
-    
+
     require('./common')(namespace).name,
-    
-    
-    
-        require('./crazy')(namespace).name,
-    
-    
-    
-        require('./important')(namespace).name
-    
-    
-    
+
+    require('./crazy')(namespace).name,
+
+    require('./important')(namespace).name
+
     // inject:modules end
 ]);
 
@@ -38,8 +30,7 @@ if (process.env.SENTRY_MODE === 'prod') {
 }
 
 var runDeps = [];
-var run = function() {
-};
+var run = function() {};
 
 run.$inject = runDeps;
 app.run(run);
